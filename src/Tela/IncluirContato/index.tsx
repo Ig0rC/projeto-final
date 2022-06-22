@@ -54,15 +54,17 @@ function IncluirContato({ navigation }: Props) {
   return (
     <View>
       <Label>Nome</Label>
-      <Input value={nome} onChangeText={setNome} placeholder="Nome" />
+      <Input maxLength={20} value={nome} onChangeText={setNome} placeholder="Nome" />
       <Label>Sobrenome</Label>
       <Input
+        maxLength={30} 
         value={sobrenome}
         onChangeText={setSobrenome}
         placeholder="Sobrenome"
       />
       <Label>DDD</Label>
       <Input
+        maxLength={2} 
         keyboardType="number-pad"
         value={DDD}
         onChangeText={setDDD}
@@ -70,6 +72,7 @@ function IncluirContato({ navigation }: Props) {
       />
       <Label>Telefone</Label>
       <Input
+        maxLength={9} 
         keyboardType="number-pad"
         value={telefone}
         onChangeText={setTelefone}
